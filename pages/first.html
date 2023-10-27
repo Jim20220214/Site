@@ -1088,32 +1088,36 @@ Windows
 Mac
 Linux
 Usage
-Configuring as EDITOR
-Setup🔗
-Some operating systems and installation methods will require a configuration change to make subl available on the PATH.</p>
+Configuring as EDITOR</p>
+<h6 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link"></a></h6>
+<p>Some operating systems and installation methods will require a configuration change to make subl available on the PATH.</p>
 <p>echo &lsquo;export PATH=&rdquo;/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH&rdquo;&rsquo; &gt;&gt; ~/.zprofile</p>
-<p>Usage
-To see the available flags, run subl &ndash;help. The available flags will vary per operating system – the following example is from Linux:</p>
-<p>Sublime Text build 4131</p>
-<p>Usage: subl [arguments] [files]         Edit the given files
+<h6 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link"></a></h6>
+<p>To see the available flags, run subl &ndash;help. The available flags will vary per operating system – the following example is from Linux:
+<div class="highlight"><pre>Sublime Text build 4131
+
+Usage: subl [arguments] [files]         Edit the given files
    or: subl [arguments] [directories]   Open the given directories
-   or: subl [arguments] &ndash; [files]      Edit files that may start with &lsquo;-&lsquo;
+   or: subl [arguments] -- [files]      Edit files that may start with &#39;-&#39;
    or: subl [arguments] -               Edit stdin
-   or: subl [arguments] - &gt;out          Edit stdin and write the edit to stdout</p>
-<p>Arguments:
-  &ndash;project <project>:    Load the given project
-  &ndash;command <command>:    Run the given command
-  -n or &ndash;new-window:     Open a new window
-  &ndash;launch-or-new-window: Only open a new window if the application is open
-  -a or &ndash;add:            Add folders to the current window
-  -w or &ndash;wait:           Wait for the files to be closed before returning
-  -b or &ndash;background:     Don&rsquo;t activate the application
-  &ndash;safe-mode:            Launch using a sandboxed (clean) environment
-  -h or &ndash;help:           Show help (this message) and exit
-  -v or &ndash;version:        Show version and exit</p>
-<p>Filenames may be given a :line or :line:column suffix to open at a specific
+   or: subl [arguments] - &gt;out          Edit stdin and write the edit to stdout
+
+Arguments:
+  --project &lt;project&gt;:    Load the given project
+  --command &lt;command&gt;:    Run the given command
+  -n or --new-window:     Open a new window
+  --launch-or-new-window: Only open a new window if the application is open
+  -a or --add:            Add folders to the current window
+  -w or --wait:           Wait for the files to be closed before returning
+  -b or --background:     Don&#39;t activate the application
+  --safe-mode:            Launch using a sandboxed (clean) environment
+  -h or --help:           Show help (this message) and exit
+  -v or --version:        Show version and exit
+
+Filenames may be given a :line or :line:column suffix to open at a specific
 location.
-CONFIGURING AS EDITOR🔗
+</pre></div></p>
+<p>CONFIGURING AS EDITOR🔗
 To use Sublime Text as the editor for many commands that prompt for input, set your EDITOR environment variable:</p>
 <p>export EDITOR=&rsquo;subl -w&rsquo;
 Specifying -w will cause the subl command to not exit until the file is closed.</p></article></body></html>
