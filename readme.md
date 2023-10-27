@@ -1,9 +1,9 @@
 # Site
 
 ### ToDo
-Github Acctions  
-- [x] Peak at Github Acctions
-- [ ] Deeper look at Github Acctions
+Github Acctions
+: - [x] Peak at Github Acctions
+: - [ ] Deeper look at Github Acctions
 
 - [ ] CRM DOC
 
