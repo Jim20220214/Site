@@ -27,6 +27,14 @@ virtual Lists
 
 required Information
 
+: 2 sets of information
+: custom dialog for each
 
 ---
+- [ ] custom dialog
+- [ ] 2 sett
+
+
+---
+
 
