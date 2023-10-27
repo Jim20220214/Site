@@ -1078,4 +1078,225 @@ body .markdown-body
 .highlight .gc{color:#999;background-color:#EAF2F5}
 </style><title>git</title></head><body><article class="markdown-body"><h1 id="git">GIT<a class="headerlink" href="#git" title="Permanent link"></a></h1>
 <p><a href="https://jim20220214.github.io/Site/">Home</a></p>
-<h2 id="how-to-git-gud">How To Git Gud<a class="headerlink" href="#how-to-git-gud" title="Permanent link"></a></h2></article></body></html>
+<h2 id="how-to-git-gud">How To Git Gud<a class="headerlink" href="#how-to-git-gud" title="Permanent link"></a></h2>
+<h1 id="readme">Readme<a class="headerlink" href="#readme" title="Permanent link"></a></h1>
+<h2 id="git_1">Git<a class="headerlink" href="#git_1" title="Permanent link"></a></h2>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"></a></h3>
+<blockquote>
+<p>Step 0: Install Git and Create a GitHub Account</p>
+</blockquote>
+<h4 id="step-1-create-a-local-git-repository">Step 1: Create a Local Git Repository<a class="headerlink" href="#step-1-create-a-local-git-repository" title="Permanent link"></a></h4>
+<div class="highlight"><pre>cd ~/Desktop
+mkdir newProject
+cd newProject
+git init
+git remote add remoteName https://github.com/Jim20220214/newProject.git
+git branch -M branchName
+echo &quot;# Readme&quot; &gt;&gt; readme.md
+git add readme.md
+git commit -m &quot;first commit&quot;
+git push -u remoteName branchName
+git status
+</pre></div>
+
+<h4 id="step-2-create-a-new-repository-on-github">Step 2: Create a New Repository on GitHub<a class="headerlink" href="#step-2-create-a-new-repository-on-github" title="Permanent link"></a></h4>
+<div class="highlight"><pre>git remote add [remoteName] [branchURL]
+git branch -M [branchName]
+</pre></div>
+
+<h4 id="step-3-add-a-file-to-the-repository">Step 3: Add a File to the Repository<a class="headerlink" href="#step-3-add-a-file-to-the-repository" title="Permanent link"></a></h4>
+<p><code>git add [filename]</code></p>
+<blockquote>
+<p>You can check which files Git is tracking by running: <code>git status</code></p>
+</blockquote>
+<h4 id="step-4-unstage-files-from-git">Step 4: Unstage Files from Git<a class="headerlink" href="#step-4-unstage-files-from-git" title="Permanent link"></a></h4>
+<p><code>git reset -- [file_path]</code><br />
+<code>git rm --cached [file-name]</code></p>
+<p class="" style="page-break-before: always"></p>
+
+<h4 id="step-5-create-a-commit">Step 5: Create a Commit<a class="headerlink" href="#step-5-create-a-commit" title="Permanent link"></a></h4>
+<p><code>git commit -m "Notes about the commit"</code></p>
+<h4 id="step-6-undo-last-commit">Step 6: Undo Last Commit<a class="headerlink" href="#step-6-undo-last-commit" title="Permanent link"></a></h4>
+<p><code>git revert [hash]</code></p>
+<blockquote>
+<p>Get the hash from the commit by checking the log: <code>git log</code></p>
+</blockquote>
+<h4 id="step-7-create-a-new-branch">Step 7: Create a New Branch<a class="headerlink" href="#step-7-create-a-new-branch" title="Permanent link"></a></h4>
+<ol>
+<li>Create branch
+<code>git branch [new_branch_name]</code> (May use -b or -B, RTFM)</li>
+<li>Switch branch
+<code>git checkout [branch_name]</code></li>
+<li>Set Upstream
+<code>git push -u [remote] [branch]</code></li>
+</ol>
+<h4 id="step-8-switch-branches">Step 8: Switch Branches<a class="headerlink" href="#step-8-switch-branches" title="Permanent link"></a></h4>
+<p><code>git checkout [branch_name]</code></p>
+<h4 id="step-9-rename-a-local-or-remote-git-branch">Step 9: Rename a Local or Remote Git Branch<a class="headerlink" href="#step-9-rename-a-local-or-remote-git-branch" title="Permanent link"></a></h4>
+<p><code>git branch -m new-name</code></p>
+<blockquote>
+<p>Since there isn’t a way to directly rename a remote Git branch, you first need to delete the old branch name, then push the new branch name to the remote repository.</p>
+</blockquote>
+<h4 id="step-10-delete-a-local-or-remote-git-branch">Step 10: Delete a Local or Remote Git Branch<a class="headerlink" href="#step-10-delete-a-local-or-remote-git-branch" title="Permanent link"></a></h4>
+<p>Deleting a local branch doesn&rsquo;t affect a remote branch. To delete a local Git branch, run:</p>
+<p><code>git branch -d [branch_name]</code></p>
+<p>Use the following syntax to delete a remote Git branch:</p>
+<p><code>git push [remote] --delete [branch_name]</code></p>
+<p><code>git branch</code> - Lists Local branches
+<code>git branch -r</code> - Lists Remote branches</p>
+<h4 id="step-12-set-upstream-branch">Step 12: Set Upstream Branch<a class="headerlink" href="#step-12-set-upstream-branch" title="Permanent link"></a></h4>
+<p>Sending something upstream in Git means that you are sending it back to the repository owner.</p>
+<p>Using the git set upstream command, you can choose the flow direction of your current local branch. The command also allows you to change the default remote branch.</p>
+<p><code>git push -u [remote] [branch]</code></p>
+<p>you can use this new config entry to automatically setup remote tracking:
+<code>git config --global push.autoSetupRemote true</code></p>
+<h4 id="step-13-remove-a-git-remote">Step 13: Remove a Git Remote<a class="headerlink" href="#step-13-remove-a-git-remote" title="Permanent link"></a></h4>
+<p><code>git remote remove [remote name]</code></p>
+<blockquote>
+<p><code>git remote -v</code> shows the available remotes</p>
+</blockquote>
+<h4 id="step-14-git-merge">Step 14: Git Merge<a class="headerlink" href="#step-14-git-merge" title="Permanent link"></a></h4>
+<ol>
+<li>Create a branch <ol>
+<li>Create <code>git checkout -b [branch name]</code></li>
+<li>Configure upstream <code>git push -u [remote] [branch]</code> </li>
+<li>Add <code>git add readme.md</code></li>
+<li>Commit <code>git commit -m "message text"</code></li>
+<li>Push <code>git push [remote-name] [branch-name]</code></li>
+</ol>
+</li>
+<li>To merege we want to be on the &ldquo;main&rdquo; branch that will get the branch merged in to it.<ol>
+<li>Make sure we are on the right branch <code>git status</code></li>
+<li>Otherwise <code>git checkout [main-branch]</code></li>
+<li>Update the main branch with <code>git fetch</code> and <code>git pull</code></li>
+<li>Merge <code>git merge [branch-name]</code></li>
+</ol>
+</li>
+<li>Clean up by removing the branch localy remotely and finaly prune our remote to reflect only existing branches<ol>
+<li>Local <code>git branch -d [branchToDelete]</code></li>
+<li>Remote <code>git push [remote] -d [branchToDelete]</code> and <code>git branch -d -r [remote/branchToDelete]</code></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>[!NOTE]
+Prune can be usefull if not all branches are reflected correctly<br />
+<code>git remote prune [remote]</code> or <code>git fetch -p</code> <code>git pull -p</code></p>
+</blockquote>
+<h4 id="step-15-resolve-merge-conflicts">Step 15: Resolve Merge Conflicts<a class="headerlink" href="#step-15-resolve-merge-conflicts" title="Permanent link"></a></h4>
+<p>Nothing to say origin</p>
+<h4 id="step-16-create-a-pull-request">Step 16: Create a Pull Request<a class="headerlink" href="#step-16-create-a-pull-request" title="Permanent link"></a></h4>
+<p>Create a pull request (PR) to inform a repository owner that they should review the changes you&rsquo;ve made to their code. Then the owner can approve the pull request and merge the changes into the main repository.</p>
+<p>If you are the co-owner or owner of a repository, you don&rsquo;t have to create pull requests to merge your changes. However, you can still do it to keep track of your feature updates and history.</p>
+<p>For this guide, we will create a readme file for our repository locally and make a pull request on GitHub to illustrate the process.</p>
+<ol>
+<li>
+<p>Pull request</p>
+<ol>
+<li>Create <code>git checkout -b [branch name]</code></li>
+<li>Configure upstream <code>git push -u [remote] [branch]</code> </li>
+<li>Add <code>git add readme.md</code>.</li>
+<li>Commit <code>git commit -m "Added a readme file"</code></li>
+<li>Push <code>git push [remote] [branch name]</code></li>
+</ol>
+</li>
+<li>
+<p>Log in to your GitHub page. There is now a Create pull request option in your repository with the branch name we created in the command line. Click the Compare &amp; pull request button.</p>
+<ol>
+<li>
+<p>GitHub states if you can merge the branches and apply the changes. Optionally, add a comment about your pull request and click Create pull request.</p>
+</li>
+<li>
+<p>You can accept the changes in the Pull requests tab on GitHub. When you merge the branches, delete the obsolete branch by clicking Delete branch to keep the repository clean.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="step-17-synchronize-changes-on-github-and-locally">Step 17: Synchronize Changes on GitHub and Locally<a class="headerlink" href="#step-17-synchronize-changes-on-github-and-locally" title="Permanent link"></a></h4>
+<p>When you merge changes on GitHub, they don&rsquo;t appear automatically in your local repository. You have to pull the changes to your local repository to see the updates.</p>
+<p>Synchronize your local repository with GitHub by running:</p>
+<p><code>git pull [remote] [branch]</code></p>
+<hr />
+<p><code>#0969DA</code></p>
+<hr />
+<p><code>git remote add &lt;remote-name&gt; &lt;remote-repo-URL&gt;</code>
+git commit -a &ndash;allow-empty-message -m &ldquo;&rdquo;</p>
+<hr />
+<h1 id="second">Second<a class="headerlink" href="#second" title="Permanent link"></a></h1>
+<p>Line</p>
+<h2 id="more-code">More code<a class="headerlink" href="#more-code" title="Permanent link"></a></h2>
+<h2 id="git-is-case-sensitive">Git is case sensitive<a class="headerlink" href="#git-is-case-sensitive" title="Permanent link"></a></h2>
+<div class="highlight"><pre>The name &quot;git&quot; was given by Linus Torvalds when he wrote the very first version. He described the tool as &quot;the stupid content tracker&quot; and the name as (depending on your mood):
+
+random three-letter combination that is pronounceable, and not actually used by any common UNIX command. The fact that it is a mispronunciation of &quot;get&quot; may or may not be relevant.
+stupid. contemptible and despicable. simple. Take your pick from the dictionary of slang.
+&quot;global information tracker&quot;: you&#39;re in a good mood, and it actually works for you. Angels sing, and a light suddenly fills the room.
+&quot;goddamn idiotic truckload of sh*t&quot;: when it breaks
+</pre></div>
+
+<p>GitHub</p>
+<p>Milestones</p>
+<p>Wiki</p>
+<p>Project</p>
+<p>Acctions</p>
+<dl>
+<dt>BG</dt>
+<dd>Dark  = #222222</dd>
+<dd>Light = #CCCCCC</dd>
+</dl>
+<p>P:__Fritidshus_Montage_Specunderlag</p>
+<p>echo &ldquo;# Third&rdquo; &gt;&gt; README.md
+git init
+git add README.md
+git commit -m &ldquo;first commit&rdquo;
+git branch -M main
+git remote add origin <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/Jim20220214/Third.git" title="GitHub Repository: Jim20220214/Third.git">Jim20220214/Third.git</a>
+git push -u origin main</p>
+<!--
+
+>
+
+<p>[!IMPORTANT]</p>
+<blockquote>
+<p>Crucial information necessary for users to succeed.<br />
+One More line to merge</p>
+<p>[!WARNING]
+Critical content demanding immediate user attention due to potential risks.</p>
+</blockquote>
+<p>&ndash;&gt;</p>
+<!--STYLE-->
+
+<!--style>
+
+:root {
+  --main-bg-color: #333333;
+  --main-bg-color: #333333;
+}
+
+html, body, ul,li, h1,h2, h3, p, div, table {
+    //background-color: #EEEEE;
+    color: #DDDDDD;
+    background-color: var(--main-bg-color);
+    font-family: Menlo, Monaco, monospace;
+}
+@font-face {
+font-family: 'Trade Gothick LT Std';
+src:
+    local('Trade Gothick LT Std'),
+}
+@media print {
+    html, body, ul,li, h1,h2, h3, p, div, table {
+        background-color: orange; 
+    }
+}
+a:active {
+    color: green;
+}
+
+
+
+</style-->
+
+<!--/STYLE-->
+
+<hr /></article></body></html>
