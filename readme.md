@@ -19,12 +19,14 @@ Scope Documentetion
 - [ ] CRM DOC
 - [ ] WebSite
 
----
 #### FileMaker
 virtual Lists
 
 - [ ] Line item
 - [ ] Calculations
+
+required Information
+
 
 ---
 
