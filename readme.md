@@ -1,28 +1,31 @@
 # Site
 
 ### ToDo
-Github Acctions
-: - [x] Peak at Github Acctions
-: - [ ] Deeper look at Github Acctions
+#### Git
+##### Github Acctions:
+
+- [x] Peak at Github Acctions
+- [ ] Deeper look at Github Acctions
+
+#### Doc
+##### Setup Documentation:
+
+- [ ] ZSH Setup
+- [ ] Sublime Setup
+- [ ] Affinity Setup
+
+##### Scope Documentetion
 
 - [ ] CRM DOC
+- [ ] WebSite
 
 ---
+#### FileMaker
 
-virtual Lists
+##### virtual Lists
 
 - [ ] Line item
 - [ ] Calculations
 
-
-DOCUMENTATION:
-
-- [ ] ZSH Setup
-
-- [ ] Sublime Setup
-
-- [ ] Affinity Setup
-
 ---
 
-- [ ] WebSite
