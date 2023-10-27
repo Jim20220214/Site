@@ -8,21 +8,20 @@
 - [ ] Deeper look at Github Acctions
 
 #### Doc
-##### Setup Documentation:
+Setup Documentation:
 
 - [ ] ZSH Setup
 - [ ] Sublime Setup
 - [ ] Affinity Setup
 
-##### Scope Documentetion
+Scope Documentetion
 
 - [ ] CRM DOC
 - [ ] WebSite
 
 ---
 #### FileMaker
-
-##### virtual Lists
+virtual Lists
 
 - [ ] Line item
 - [ ] Calculations
