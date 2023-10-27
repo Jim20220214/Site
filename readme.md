@@ -2,8 +2,8 @@
 
 ### ToDo
 Github Acctions  
-: - [x] Peak at Github Acctions
-: - [ ] Deeper look at Github Acctions
+- [x] Peak at Github Acctions
+- [ ] Deeper look at Github Acctions
 
 - [ ] CRM DOC
 
