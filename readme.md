@@ -11,10 +11,13 @@ Github Acctions:
 Setup Documentation:
 
 - [ ] ZSH Setup
-    - [x] Home zshrc
-    - [x] Local zshrc
-    
+    - [x] Home .zshrc
+    - [x] Local .zshrc
+    - [x] Aliases
+
 - [ ] Sublime Setup
+	- [x] CLI
+	- [x] 
 - [ ] Affinity Setup
 
 Scope Documentetion

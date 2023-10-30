@@ -1080,15 +1080,14 @@ body .markdown-body
 <hr />
 <h1 id="software">SOFTWARE<a class="headerlink" href="#software" title="Permanent link"></a></h1>
 <h3 id="nav_terminal"><a href="#terminal">Terminal</a><a class="headerlink" href="#nav_terminal" title="Permanent link"></a></h3>
-<h4 id="nav_zsh"><a href="#zsh">ZSH</a><a class="headerlink" href="#nav_zsh" title="Permanent link"></a></h4>
 <h6 id="nav_Home-zshrc"><a href="#home-zshrc">Home zshrc</a><a class="headerlink" href="#nav_Home-zshrc" title="Permanent link"></a></h6>
 <h6 id="nav_Local-zshrc"><a href="#local-zshrc">Local zshrc</a><a class="headerlink" href="#nav_Local-zshrc" title="Permanent link"></a></h6>
+<h6 id="nav_aliases-zshaliaseszsh"><a href="#aliases-zshaliaseszsh">Aliases</a><a class="headerlink" href="#nav_aliases-zshaliaseszsh" title="Permanent link"></a></h6>
 <h3 id="nav_codetext-editor"><a href="#codetext-editor">Code/Text Editor</a><a class="headerlink" href="#nav_codetext-editor" title="Permanent link"></a></h3>
 <h6 id="nav_setup"><a href="#setup">Setup</a><a class="headerlink" href="#nav_setup" title="Permanent link"></a></h6>
 <h6 id="nav_usage"><a href="#usage">Usage</a><a class="headerlink" href="#nav_usage" title="Permanent link"></a></h6>
 <h6 id="nav_configuring-as-editor"><a href="#configuring-as-editor">Configuring as EDITOR</a><a class="headerlink" href="#nav_configuring-as-editor" title="Permanent link"></a></h6>
-<h3 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link"></a></h3>
-<h4 id="zsh">ZSH<a class="headerlink" href="#zsh" title="Permanent link"></a></h4>
+<h3 id="terminal-zsh">Terminal (ZSH)<a class="headerlink" href="#terminal-zsh" title="Permanent link"></a></h3>
 <h5 id="home-zshrc-zshrc">Home zshrc (~/.zshrc)<a class="headerlink" href="#home-zshrc-zshrc" title="Permanent link"></a></h5>
 <p>Checks if thre exists an .zshrc file inb the current dirrectory, otherwise runs with this config file.
 <div class="highlight"><pre># Store history in the directory where the shell session was started
@@ -1193,9 +1192,80 @@ PS1=&#39;%F{244}[%F{124}%*%F{244}] %F{166}%n%F{244}@%F{160}%m%F{172}%~ %F{178}${
 ZSH_THEME=&quot;agnoster&quot;
 </pre></div>
 
+<h5 id="aliases-zshaliaseszsh">Aliases (~/.zsh/aliases.zsh)<a class="headerlink" href="#aliases-zshaliaseszsh" title="Permanent link"></a></h5>
+<div class="highlight"><pre># aliases.zsh
+#-----
+#open local terminal
+alias new=&#39;open -a terminal ./.&#39;
+#-----
+#root terminal
+alias root=&#39;sudo -i&#39;
+#-----
+
+#single letters
+alias a=&#39;open -a terminal ./.&#39;
+
+alias h=&#39;history&#39;
+
+alias q=&#39;open -a terminal ~/.&#39;
+#-----
+
+#dev shortcuts
+alias local=&#39;cd ~/desktop/\$DEV/site&#39;
+alias locals=&#39;sudo php -S localhost:9000&#39;
+#--
+#alias publ=&#39;cd ~/desktop/\$DEV/sitePublic&#39;
+#alias publs=&#39;sudo php -S 192.168.1.10:10&#39;
+#--
+#alias priv=&#39;cd ~/desktop/\$DEV/sitePrivate&#39;
+#alias privs=&#39;sudo php -S 192.168.1.10:1111&#39;
+#-----
+
+#DIR
+alias home=&#39;cd ~/Desktop&#39;
+alias doc=&#39;cd ~/Documents&#39;
+alias dev=&#39;cd ~/desktop/\$DEV/site&#39;
+#-----
+
+#QOL
+alias cls=&#39;clear&#39;
+#intel alias tmp=&#39;sudo powermetrics --samplers smc |grep -i &quot;CPU die temperature&quot; &#39;
+alias tmp=&#39;sudo thermal -s -u 0; echo &quot;CPU temperature: $(thermal -s -u 0 | awk &#39;\&#39;&#39;/CPU/{print $NF}&#39;\&#39;&#39;)°C&quot;&#39;
+alias ls=&#39;ls -G&#39; 
+#-----
+
+#HTML
+alias html=&#39;mkdir pages&#39;
+alias style=&#39;mkdir style&#39;
+alias script=&#39;mkdir script&#39;
+#-----
+
+#GIT
+alias ga=&#39;git add&#39;
+alias gaa=&#39;git add --all&#39;
+alias gb=&#39;git branch&#39;
+alias gs=&#39;git status&#39;
+alias gd=&#39;git diff&#39;
+alias gco=&#39;git checkout&#39;
+alias gl=&#39;git log&#39;
+alias gc=&#39;git commit -a --allow-empty-message -m &quot;&quot;&#39;
+alias gps=&#39;git push&#39;
+alias gpl=&#39;git pull&#39;
+alias gf=&#39;git fetch&#39;
+alias gm=&#39;git merge&#39;
+alias gma=&#39;git merge --abort&#39;
+#-----
+
+#GIT extra
+alias gacp=&#39;ga readme.md; gc; gps&#39;
+alias gcp=&#39;gc; gps&#39;
+alias gaacp=&#39;gaa; gcp&#39;
+#-----
+</pre></div>
+
 <hr />
-<h3 id="codetext-editor">Code/Text Editor<a class="headerlink" href="#codetext-editor" title="Permanent link"></a></h3>
-<h4 id="sublime-command-line-interface-ref">Sublime Command Line Interface <a href="https://www.sublimetext.com/docs/command_line.html">(ref)</a><a class="headerlink" href="#sublime-command-line-interface-ref" title="Permanent link"></a></h4>
+<h3 id="codetext-editor-sublime">Code/Text Editor (Sublime)<a class="headerlink" href="#codetext-editor-sublime" title="Permanent link"></a></h3>
+<p>Command Line Interface <a href="https://www.sublimetext.com/docs/command_line.html">(ref)</a></p>
 <p>Sublime Text includes a command line tool, subl, to work with files on the command line. This can be used to open files and projects in Sublime Text, as well working as an EDITOR for unix tools, such as git and subversion.</p>
 <h5 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link"></a></h5>
 <p>Some operating systems and installation methods will require a configuration change to make subl available on the PATH.</p>

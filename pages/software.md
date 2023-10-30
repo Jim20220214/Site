@@ -6,9 +6,9 @@
 # SOFTWARE 
 
 ### [Terminal](#terminal) {#nav_terminal}
-#### [ZSH](#zsh) {#nav_zsh}
 ###### [Home zshrc](#home-zshrc) {#nav_Home-zshrc}
 ###### [Local zshrc](#local-zshrc) {#nav_Local-zshrc}
+###### [Aliases](#aliases-zshaliaseszsh) {#nav_aliases-zshaliaseszsh}
 
 ### [Code/Text Editor](#codetext-editor) {#nav_codetext-editor}
 ###### [Setup](#setup) {#nav_setup}
@@ -16,13 +16,7 @@
 ###### [Configuring as EDITOR](#configuring-as-editor) {#nav_configuring-as-editor}
 
 
-### Terminal
-
-#### ZSH
-
-
-
-
+### Terminal (ZSH)
 
 ##### Home zshrc (~/.zshrc)
 Checks if thre exists an .zshrc file inb the current dirrectory, otherwise runs with this config file.
@@ -133,11 +127,88 @@ ZSH_THEME="agnoster"
 
 ```
 
+##### Aliases (~/.zsh/aliases.zsh)
+
+```zsh
+# aliases.zsh
+#-----
+#open local terminal
+alias new='open -a terminal ./.'
+#-----
+#root terminal
+alias root='sudo -i'
+#-----
+
+#single letters
+alias a='open -a terminal ./.'
+
+alias h='history'
+
+alias q='open -a terminal ~/.'
+#-----
+
+#dev shortcuts
+alias local='cd ~/desktop/\$DEV/site'
+alias locals='sudo php -S localhost:9000'
+#--
+#alias publ='cd ~/desktop/\$DEV/sitePublic'
+#alias publs='sudo php -S 192.168.1.10:10'
+#--
+#alias priv='cd ~/desktop/\$DEV/sitePrivate'
+#alias privs='sudo php -S 192.168.1.10:1111'
+#-----
+
+#DIR
+alias home='cd ~/Desktop'
+alias doc='cd ~/Documents'
+alias dev='cd ~/desktop/\$DEV/site'
+#-----
+
+#QOL
+alias cls='clear'
+#intel alias tmp='sudo powermetrics --samplers smc |grep -i "CPU die temperature" '
+alias tmp='sudo thermal -s -u 0; echo "CPU temperature: $(thermal -s -u 0 | awk '\''/CPU/{print $NF}'\'')°C"'
+alias ls='ls -G' 
+#-----
+
+#HTML
+alias html='mkdir pages'
+alias style='mkdir style'
+alias script='mkdir script'
+#-----
+
+#GIT
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gs='git status'
+alias gd='git diff'
+alias gco='git checkout'
+alias gl='git log'
+alias gc='git commit -a --allow-empty-message -m ""'
+alias gps='git push'
+alias gpl='git pull'
+alias gf='git fetch'
+alias gm='git merge'
+alias gma='git merge --abort'
+#-----
+
+#GIT extra
+alias gacp='ga readme.md; gc; gps'
+alias gcp='gc; gps'
+alias gaacp='gaa; gcp'
+#-----
+
+
+
+```
+
+
 ----------
 
-### Code/Text Editor
+### Code/Text Editor (Sublime)
 
-#### Sublime Command Line Interface [(ref)][ref_sublime]
+Command Line Interface [(ref)][ref_sublime]
 
 Sublime Text includes a command line tool, subl, to work with files on the command line. This can be used to open files and projects in Sublime Text, as well working as an EDITOR for unix tools, such as git and subversion.
 
