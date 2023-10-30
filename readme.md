@@ -10,14 +10,14 @@ Github Acctions:
 #### Doc
 Setup Documentation:
 
-- [ ] ZSH Setup
+- [x] ZSH Setup
     - [x] Home .zshrc
     - [x] Local .zshrc
     - [x] Aliases
 
-- [ ] Sublime Setup
+- [x] Sublime Setup
 	- [x] CLI
-	- [x] 
+	- [x] Editor
 - [ ] Affinity Setup
 
 Scope Documentetion
@@ -44,3 +44,4 @@ required Information
 ---
 
 
+---
