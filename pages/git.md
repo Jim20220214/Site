@@ -189,8 +189,6 @@ stupid. contemptible and despicable. simple. Take your pick from the dictionary 
 "goddamn idiotic truckload of sh*t": when it breaks
 ```
 
-
-
 GitHub
 
 Milestones
@@ -200,8 +198,6 @@ Wiki
 Project
 
 Acctions
-
-
 
 
 BG
