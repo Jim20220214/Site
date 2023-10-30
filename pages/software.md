@@ -1,12 +1,31 @@
-# SOFTWARE 
 
 [Home][Home]
+
+---
+
+# SOFTWARE 
+
+### [Terminal](#terminal) {#nav_terminal}
+#### [ZSH](#zsh) {#nav_zsh}
+###### [Home zshrc](#home-zshrc) {#nav_Home-zshrc}
+###### [Local zshrc](#local-zshrc) {#nav_Local-zshrc}
+
+### [Code/Text Editor](#codetext-editor) {#nav_codetext-editor}
+###### [Setup](#setup) {#nav_setup}
+###### [Usage](#usage) {#nav_usage}
+###### [Configuring as EDITOR](#configuring-as-editor) {#nav_configuring-as-editor}
+
 
 ### Terminal
 
 #### ZSH
 
-~/.zshrc
+
+
+
+
+##### Home zshrc (~/.zshrc)
+Checks if thre exists an .zshrc file inb the current dirrectory, otherwise runs with this config file.
 ```zsh
 # Store history in the directory where the shell session was started
 # Define a colorful prompt
@@ -33,7 +52,8 @@ else
 fi
 #-----
 ```
-[currentFolder]/.zshrc
+
+##### Local zshrc (./.zshrc)
 ```zsh
 autoload -U colors
 autoload -U colors && colors
@@ -62,7 +82,7 @@ compinit
 DIRSTACKSIZE=8
 HISTSIZE=5000
 SAVEHIST=5000
-HISTFILE=~/.history
+HISTFILE=./.zhistory
 MAILCHECK=0
 
 EDITOR=nano
@@ -113,15 +133,13 @@ ZSH_THEME="agnoster"
 
 ```
 
+----------
+
 ### Code/Text Editor
 
 #### Sublime Command Line Interface [(ref)][ref_sublime]
 
 Sublime Text includes a command line tool, subl, to work with files on the command line. This can be used to open files and projects in Sublime Text, as well working as an EDITOR for unix tools, such as git and subversion.
-
-###### [Setup](#setup) {#nav_setup}
-###### [Usage](#usage) {#nav_usage}
-###### [Configuring as EDITOR](#configuring-as-editor) {#nav_configuring-as-editor}
 
 ##### Setup
 Some operating systems and installation methods will require a configuration change to make subl available on the PATH.

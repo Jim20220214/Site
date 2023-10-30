@@ -11,6 +11,9 @@ Github Acctions:
 Setup Documentation:
 
 - [ ] ZSH Setup
+    - [x] Home zshrc
+    - [x] Local zshrc
+    
 - [ ] Sublime Setup
 - [ ] Affinity Setup
 
