@@ -1,0 +1,9 @@
+# .gitignore
+#/.gitignore
+
+# .mac
+**/.DS_Store
+
+# md files used for making the html
+pages/first.md
+pages/*.md
