@@ -1,6 +1,7 @@
-# GIT
-
 [Home][Home]
+---
+
+# GIT
 
 ## How To Git Gud
 
