@@ -1,0 +1,15 @@
+# .gitignore
+#/.gitignore
+
+# .mac
+**/.DS_Store
+/.zshrc
+/.zhistory
+
+#html variant of readme is reduntant on git
+/readme.html
+
+
+# md files used for making the html
+#pages/first.md
+#pages/*.md
