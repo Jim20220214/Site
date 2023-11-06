@@ -1,9 +1,10 @@
 :root {
-/*    --url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");*/
-	--url: #333333;
+    --url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");
+
 
 }
 
 body {
     background: var(--url);
+
 }
