@@ -1,0 +1,12 @@
+:root {
+    /*--url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");*/
+    --url: #333333;
+
+}
+
+body {
+    background-color: #333333;
+}
+h1 {
+    font-size: 32pt;
+}
